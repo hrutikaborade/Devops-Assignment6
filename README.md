@@ -19,23 +19,23 @@ mysql-secret.yaml
 Steps : 
 
  1. Create a namespace : 
-     kubectl create namespace demo
+     kubectl create namespace assignment6
      
  2. Set the current namesapce to the one you created : 
-     kubectl config set-context --current --namespace=demo
+     kubectl config set-context --current --namespace=assignment6
      
- 3. Create secret db-secret :
-     kubectl create -f secret.yaml
+ 3. Create secret  :
+     kubectl create -f mysql-secret.yaml 
 
- 4. Create configmap db-config : 
-     kubectl create -f configmap.yaml
+ 4. Create configmap : 
+     kubectl create -f mysql-configmap.yaml
 
  5. Create deployment for MySQL :
-     kubectl create -f db-deployment.yaml
+     kubectl create -f mysql-deployment.yaml 
      kubectl get pods --watch
      
  6. Create service for MySQL :
-     kubectl create -f db-service.yaml
+     kubectl create -f mysql-service.yaml
       
 
 
