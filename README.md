@@ -19,10 +19,10 @@ mysql-secret.yaml
 Steps : 
 
  1. Create a namespace : 
-     kubectl create namespace assignment6
+     kubectl create namespace demo
      
  2. Set the current namesapce to the one you created : 
-     kubectl config set-context --current --namespace=assignment6
+     kubectl config set-context --current --namespace=demo
      
  3. Create secret  :
      kubectl create -f mysql-secret.yaml 
